@@ -11,7 +11,6 @@ programa
 				b) média do número de filhos;
 				c) maior salário;
 				d) percentual de pessoas com salário até R$100,00.
-
 		 */
 
 
@@ -79,7 +78,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 1206; 
+ * @POSICAO-CURSOR = 375; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
