@@ -37,8 +37,8 @@ programa
 				}
 
 
-		escreva("Salario total: ", salario)
-		escreva("\nSalarario extra: ", hrExtra)
+		escreva("Salário total: ", salario)
+		escreva("\nSalário extra: ", hrExtra)
 	}
 }
 /* $$$ Portugol Studio $$$ 
@@ -46,7 +46,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 456; 
+ * @POSICAO-CURSOR = 870; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
