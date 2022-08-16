@@ -17,6 +17,6 @@ fun main() {
         println("Número $num é par e a raiz quadrada dele é $raizQuad")
     }else{
         val elevadoQuad = num.toFloat().pow(2)
-        println("Número $num é ímpar e a raiz quadrada dele é $elevadoQuad")
+        println("Número $num é ímpar e elevado ao quadrado fica $elevadoQuad")
     }
 }
