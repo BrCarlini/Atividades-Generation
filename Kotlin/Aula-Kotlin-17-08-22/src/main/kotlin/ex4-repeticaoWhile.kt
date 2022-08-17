@@ -14,16 +14,26 @@ fun main() {
     // o número de pessoas calmas com menos de 18 anos.
 
     var cont = 1
-    var pessoaCalma = 0
+    var idade = 0
+    var sexo =0
+    var opc = 0
 
-    while(cont <= 5){
-        println("$cont° Pessoa Entrevistada.")
+    var pCalmas = 0
+    var mNerv = 0
+    var hAgre = 0
+    var outCalm = 0
+    var pNervMaior40 = 0
+    var pCalmMenor18 = 0
+
+
+    while(cont <= 150){
+        println("${cont}° Pessoa Entrevistada.")
 
         print("Informe sua idade: ")
-        val idade = readln().toInt()
+        idade = readln().toInt()
 
         print("Sexo:\n1-Feminino\n2-Masculino\n3-Outros\n>>> ")
-        val sexo = readln().toInt()
+        sexo = readln().toInt()
 
         println("Escolha a opção que se enquadra na sua características psicológicas no momento:")
         print("\n" +
@@ -31,13 +41,41 @@ fun main() {
                 "2- Pessoa Nervosa\n" +
                 "3- Pessoa Agressiva\n" +
                 ">>> ")
-        val opcao = readln().toInt()
+        opc = readln().toInt()
 
-        if(opcao == 1){
-            pessoaCalma++
-        }else if(){}
+        if(opc == 1){
+            pCalmas++
+        }
 
+        if(sexo == 1 && opc == 2){
+            mNerv++
+        }
+
+        if(sexo == 2 && opc == 3){
+            hAgre++
+        }
+
+        if(sexo == 3 && opc == 1){
+            outCalm++
+        }
+
+        if(idade > 40 && opc == 2){
+            pNervMaior40++
+        }
+
+        if(idade < 18 && opc == 1){
+            pCalmMenor18++
+        }
 
         cont++
     }
+
+    println("==========================================================================")
+    println("o número de pessoas calmas: $pCalmas")
+    println("o número de mulheres nervosas: $mNerv")
+    println("o número de homens agressivos: $hAgre")
+    println("o número de outros calmos: $outCalm")
+    println("o número de pessoas nervosas com mais de 40 anos: $pNervMaior40")
+    println("o número de pessoas calmas com menos de 18 anos: $pCalmMenor18")
+
 }

@@ -4,7 +4,6 @@ fun main() {
     //0(zero).(DO...WHILE)
 
     var contMult3 = 0
-    var cont = 0
     var somaMult3 =0
 
     do{
