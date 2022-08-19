@@ -11,8 +11,8 @@ fun main() {
     Apresentar todos os dados da list
     * */
 
-    
-    // As funções este progrma estão no arquivo funEx1.kt
+
+    // As funções deste programa estão no arquivo funEx1.kt
 
     while(true){
         println("Menu:\n1 - Adicionar Item\n2 - Remover Item\n3 - Atualizar Item\n4 - Mostrar Itens Adicionados\n5 - Sair")
