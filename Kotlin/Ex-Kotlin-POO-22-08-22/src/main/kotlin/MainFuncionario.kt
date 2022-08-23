@@ -10,7 +10,7 @@ fun main() {
     funcionario1.dataNasc = "11/11/1111"
     funcionario1.endereco = "Av. Bosque Encantado"
 
-    print("Bateu a meta ? [1-Sim/2-Sim]: ")
+    print("Bateu a meta ? [1-Sim/2-Não]: ")
     val pergMeta = readln()
 
     if(pergMeta == "1"){
