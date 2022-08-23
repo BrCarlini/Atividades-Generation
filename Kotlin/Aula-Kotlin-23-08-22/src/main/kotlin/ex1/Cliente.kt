@@ -11,7 +11,7 @@ Ao instanciar a classe cliente na função main(), não esquecer de colocar dent
 
 class Cliente(val nome: String, val endereco: String, val telefone: String) {
 
-    private var listaDeCompras = mutableListOf<String>()
+
 
     init {
         verificarNome()
@@ -23,24 +23,27 @@ class Cliente(val nome: String, val endereco: String, val telefone: String) {
         }
     }
 
-    fun addItem(item: String){
-        listaDeCompras.add(item)
-        println("Item adicionado com sucesso!")
-    }
-
-    fun removeItem(item: String){
-        if(listaDeCompras.contains(item)){
-            listaDeCompras.remove(item)
-            println("Item removido com sucesso")
+    companion object{
+        private var listaDeCompras = mutableListOf<String>()
+        fun addItem(item: String){
+            listaDeCompras.add(item)
+            println("Item adicionado com sucesso!")
         }
-    }
 
-    fun exibirItem(){
-        println("========= ITENS =========")
-        listaDeCompras.forEach {
-            println(it)
+        fun removeItem(item: String){
+            if(listaDeCompras.contains(item)){
+                listaDeCompras.remove(item)
+                println("Item removido com sucesso")
+            }
         }
-        println("========================")
+
+        fun exibirItem(){
+            println("========= ITENS =========")
+            listaDeCompras.forEach {
+                println(it)
+            }
+            println("========================")
+        }
     }
 
 

@@ -1,5 +1,9 @@
 package ex1
 
+import ex1.Cliente.Companion.addItem
+import ex1.Cliente.Companion.exibirItem
+import ex1.Cliente.Companion.removeItem
+
 fun main() {
     try {
         val cliente1 = Cliente("Bruno", "Av. XXXXXXX", "(11)XXXXX-XXXX")
@@ -13,14 +17,14 @@ fun main() {
                 1 -> {
                     print("Qual item deseja adicionar ? ")
                     val add = readln()
-                    cliente1.addItem(add)
+                    addItem(add)
                 }
                 2 -> {
                     print("Qual item deseja remover ? ")
                     val rv = readln()
-                    cliente1.removeItem(rv)
+                    removeItem(rv)
                 }
-                3 -> cliente1.exibirItem()
+                3 -> exibirItem()
                 4 -> break
                 else -> println("Opção inválida")
             }
