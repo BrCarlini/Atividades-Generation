@@ -13,7 +13,7 @@ class Paciente(
     var convenio = false
     var statusPaciente = false // False = Paciente Normal / True = Paciente Grave
 
-    private var listaPaciente = mutableListOf<String>()
+
 
     constructor(
         nome: String,
@@ -26,10 +26,22 @@ class Paciente(
         this.statusPaciente = statusPaciente
     }
 
-    fun addPaciente(nome: String, cpf: String, dataNasc: String){
 
-
+    companion object{
+        private var listaPaciente = mutableListOf<String>()
+        fun addPaciente(cpf: String){
+            if(cpf.isNotBlank()){
+                listaPaciente.add(cpf)
+            }
+        }
+        fun exibirListaPaciente(){
+            println("========== Lista de Pacientes(CPF) ==========")
+            listaPaciente.forEach {
+                println(it)
+            }
+        }
     }
+
 
 
 }

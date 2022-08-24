@@ -1,0 +1,5 @@
+package interfacesEx
+
+fun main() {
+
+}
