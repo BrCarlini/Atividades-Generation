@@ -31,6 +31,6 @@ fun main() {
         }
 
     }catch (e: Exception){
-        println("Ocorreu um erro!")
+        println(e.message)
     }
 }

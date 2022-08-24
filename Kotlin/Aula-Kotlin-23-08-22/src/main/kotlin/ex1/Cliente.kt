@@ -17,7 +17,7 @@ class Cliente(val nome: String, val endereco: String, val telefone: String) {
         verificarNome()
     }
 
-    fun verificarNome(){
+    private fun verificarNome(){
         if (nome == ""){
             throw Exception("Nome Inválido.")
         }
@@ -26,8 +26,10 @@ class Cliente(val nome: String, val endereco: String, val telefone: String) {
     companion object{
         private var listaDeCompras = mutableListOf<String>()
         fun addItem(item: String){
-            listaDeCompras.add(item)
-            println("Item adicionado com sucesso!")
+            if(item.isNotBlank()){
+                listaDeCompras.add(item)
+                println("Item adicionado com sucesso!")
+            }
         }
 
         fun removeItem(item: String){
