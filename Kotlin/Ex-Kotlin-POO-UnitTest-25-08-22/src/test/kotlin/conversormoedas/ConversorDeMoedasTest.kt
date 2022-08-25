@@ -6,7 +6,11 @@ import org.junit.jupiter.api.Assertions.*
 
 internal class ConversorDeMoedasTest {
 
+
     @Test
-    fun conversorDeRealParaDolar() {
+    fun conversorDeRealParaDolarTest() {
+        val conversorTest = ConversorDeMoedas()
+
+        assertEquals(19.53125, conversorTest.conversorDeRealParaDolar(100.0, 5.12))
     }
 }

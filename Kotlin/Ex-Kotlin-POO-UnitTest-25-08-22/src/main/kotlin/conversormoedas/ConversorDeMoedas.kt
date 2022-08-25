@@ -1,4 +1,8 @@
-package conversorDeMoedas
+package conversormoedas
 
-class ConversorDeMoedas {
+class ConversorDeMoedas() {
+
+    fun conversorDeRealParaDolar(valorEmReal: Double, cotacao: Double): Double{
+        return valorEmReal / cotacao
+    }
 }
