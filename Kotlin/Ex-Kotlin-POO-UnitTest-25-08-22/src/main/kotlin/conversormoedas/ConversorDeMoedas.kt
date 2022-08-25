@@ -1,0 +1,4 @@
+package conversorDeMoedas
+
+class ConversorDeMoedas {
+}
