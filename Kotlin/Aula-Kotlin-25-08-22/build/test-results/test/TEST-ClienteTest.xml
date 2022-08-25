@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="ClienteTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2022-08-25T14:34:09" hostname="DESKTOP-ABK5FEO" time="0.017">
+<testsuite name="ClienteTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2022-08-25T15:16:31" hostname="DESKTOP-ABK5FEO" time="0.017">
   <properties/>
   <testcase name="addCompraTest()" classname="ClienteTest" time="0.014"/>
-  <testcase name="criarClienteTest()" classname="ClienteTest" time="0.0"/>
-  <testcase name="removeCompraTest()" classname="ClienteTest" time="0.001"/>
+  <testcase name="criarClienteTest()" classname="ClienteTest" time="0.001"/>
+  <testcase name="removeCompraTest()" classname="ClienteTest" time="0.002"/>
   <system-out><![CDATA[Produto adicionado com sucesso!
 Produto adicionado com sucesso!
 Produto adicionado com sucesso!

@@ -7,8 +7,8 @@ internal class FuncionarioTest {
     @Test
     fun bonusTest() {
 
-        val bonus = Funcionario("Bruno", "33333333333", 2500.0)
+        val func = Funcionario("Bruno", "33333333333", 2500.0)
 
-        assertEquals(3000, bonus)
+        assertEquals(3000.0, func.bonus(20.0))
     }
 }
