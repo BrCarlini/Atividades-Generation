@@ -2,6 +2,7 @@ package poo.pokemon
 
 fun main() {
 
+    /*
     print("Nome do Pokemon: ")
     val nome = readln()
 
@@ -12,32 +13,30 @@ fun main() {
     val tipo = readln()
 
     print("Vida: ")
-    val vida = readln().toInt()
+    val vida = readln().toDouble()
 
-    print("Força: ")
-    val forca = readln().toInt()
+    print("Ataque: ")
+    val ataque = readln().toDouble()
+*/
 
-
-    val pokeAtacante = TipoFogo(nome, sexo, tipo, vida, forca)
-
-    val pokeDefensor = TipoFogo(
-        "Montres",
-        "Femea",
+    val pokeAtacante = TipoFogo(
+        "Charizard",
+        "Macho",
         "Fogo",
-        555,
-        450
+        500.0
     )
 
-    println("==== Antes do Ataque ====")
-    pokeDefensor.exibirInfos()
+    val pokeDefensor = TipoPlanta(
+        "Articulo",
+        "Femea",
+        "Fogo",
+        500.0
+    )
 
-    println()
-    pokeDefensor.ataque(pokeAtacante.forca)
-    //println("${pokeDefensor.nome} -> Vida ${pokeDefensor.vida}")
-    println()
+    pokeAtacante.ataque(200.0, pokeDefensor)
+    println(pokeAtacante.vida)
+    println("Vida do Defensor: ${pokeDefensor.vida}")
 
-    println("==== Depois do Ataque ====")
-    pokeDefensor.exibirInfos()
 
 
 }

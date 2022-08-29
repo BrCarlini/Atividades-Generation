@@ -4,17 +4,26 @@ abstract class Pokemon(
     val nome: String,
     val sexo: String,
     val tipo: String,
-    var vida: Int,
-    var forca: Int
+    var vida: Double
     ) {
 
 
 
-    abstract fun ataque(ataque: Int)
+    open fun ataque(ataque: Double, oponente: Pokemon){
+        if(ataque > 0){
+            println("$nome atacadou ${oponente.nome}.")
+        }else{
+            println("Falha no ataque")
+        }
+    }
 
-    abstract fun defesa()
+    open fun defesa(oponente: Pokemon){
+        
+    }
 
-    abstract fun exibirInfos()
+    fun exibirInfos() {
+        println("Nome: $nome\nSexo: $sexo\nTipo: $tipo\nVida: $vida")
+    }
 
 
 }

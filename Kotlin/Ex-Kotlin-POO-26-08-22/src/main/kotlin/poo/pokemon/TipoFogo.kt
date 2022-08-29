@@ -4,24 +4,27 @@ class TipoFogo(
     nome: String,
     sexo: String,
     tipo: String,
-    vida: Int,
-    forca: Int
-): Pokemon(nome, sexo, tipo, vida, forca) {
+    vida: Double
+): Pokemon(nome, sexo, tipo, vida) {
 
-    override fun ataque(ataque: Int) {
-        if(ataque > 0){
-            vida -= ataque
-            println("$nome Foi atacado.")
+    override fun ataque(ataque: Double, oponente: Pokemon) {
+        super.ataque(ataque, oponente)
+        if(oponente.tipo == "Planta" || oponente.tipo == "Inseto" || oponente.tipo == "Aço" || oponente.tipo == "Gelo"){
+            val ataqBonus = ((ataque * 0.60) + ataque)
+            oponente.vida -= ataqBonus
+            println("O Ataque foi de $ataqBonus")
         }else{
-            println("Falha no ataque")
+            oponente.vida -= ataque
         }
     }
 
-    override fun defesa() {
-        TODO("Not yet implemented")
+    override fun defesa(oponente: Pokemon) {
+        super.defesa(oponente)
+        if(oponente.tipo == "Planta" || oponente.tipo == "Inseto" || oponente.tipo == "Aço" || oponente.tipo == "Gelo"){
+            
+        }
+
     }
 
-    override fun exibirInfos() {
-        println("Nome: $nome\nSexo: $sexo\nTipo: $tipo\nVida: $vida\nForça: $forca")
-    }
+
 }

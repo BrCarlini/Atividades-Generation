@@ -1,5 +1,5 @@
 /*
-* Construtores são informações que serão exigidas a partir do momento da ciração de um objeto
+* Construtores são informações que serão exigidas a partir do momento da criação de um objeto
 *   -> Os construtores já serão declarados como atributos da classe.
 * */
 
