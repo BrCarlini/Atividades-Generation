@@ -21,7 +21,7 @@ class TipoFogo(
     override fun defesa(oponente: Pokemon) {
         super.defesa(oponente)
         if(oponente.tipo == "Planta" || oponente.tipo == "Inseto" || oponente.tipo == "Aço" || oponente.tipo == "Gelo"){
-            
+
         }
 
     }
