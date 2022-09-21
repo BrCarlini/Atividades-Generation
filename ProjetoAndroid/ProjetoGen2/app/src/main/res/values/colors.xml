@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+
+    <!-- Para tema light -->
+    <color name="purple_light">#a373ba</color>
+    <color name="green_light">#71943a</color>
+
+
+    <!-- Para tema dark -->
+    <color name="purple_dark">#260853</color>
+    <color name="green_dark">#70ff5d</color>
+</resources>
