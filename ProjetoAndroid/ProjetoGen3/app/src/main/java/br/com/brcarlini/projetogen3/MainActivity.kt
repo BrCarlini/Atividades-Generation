@@ -48,18 +48,28 @@ class MainActivity : AppCompatActivity() {
 
         val textDado = findViewById<TextView>(R.id.textDado)
 
-        //val imageDado = findViewById<ImageView>(R.id.imageDice)
+        val imageDado = findViewById<ImageView>(R.id.imageDice)
 
         textDado.text = aleat.toString()
 
-//        when(lados){
-//
-//            6 -> {
-//                when(aleat){
-//                    1 -> imageDado.setImageDrawable(R.drawable.ic_dice_d6_solid)
-//                }
-//            }
-//        }
+        when(lados){
+
+            6 -> {
+                when(aleat){
+                    1 -> imageDado.setImageResource(R.drawable.dice1)
+                    2 -> imageDado.setImageResource(R.drawable.dice2)
+                    3 -> imageDado.setImageResource(R.drawable.dice3)
+                    4 -> imageDado.setImageResource(R.drawable.dice4)
+                    5 -> imageDado.setImageResource(R.drawable.dice5)
+                    6 -> imageDado.setImageResource(R.drawable.dice6)
+                }
+            }
+
+            12 -> imageDado.setImageResource(R.drawable.d12)
+
+            20 -> imageDado.setImageResource(R.drawable.d20)
+
+        }
     }
 }
 
