@@ -6,11 +6,13 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ArrayAdapter
 import android.widget.Button
 import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import br.com.brcarlini.todoandroid.databinding.FragmentFormBinding
+import br.com.brcarlini.todoandroid.model.Categoria
 
 class FormFragment : Fragment() {
 
@@ -25,8 +27,11 @@ class FormFragment : Fragment() {
         binding = FragmentFormBinding.inflate(layoutInflater, container, false)
 
 
+        mainViewModel.listCategoria()
+
         mainViewModel.myCategoriaResponse.observe(viewLifecycleOwner){
-            Log.d("Requisicao", it.body().toString())
+            response -> Log.d("Requisicao", response.body().toString())
+            spinnerCategoria(response.body())
         }
 
 
@@ -36,6 +41,17 @@ class FormFragment : Fragment() {
         }
 
         return binding.root
+    }
+
+    fun spinnerCategoria(listCategoria: List<Categoria>?){
+        if(listCategoria != null){
+            binding.spinnerCategoria.adapter =
+                ArrayAdapter(
+                    requireContext(),
+                    androidx.appcompat.R.layout.support_simple_spinner_dropdown_item,
+                    listCategoria
+                )
+        }
     }
 
 }

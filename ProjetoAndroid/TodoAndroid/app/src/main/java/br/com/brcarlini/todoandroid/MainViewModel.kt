@@ -30,7 +30,7 @@ class MainViewModel @Inject constructor(
 
 
     init {
-        listCategoria()
+        //listCategoria()
     }
 
 
