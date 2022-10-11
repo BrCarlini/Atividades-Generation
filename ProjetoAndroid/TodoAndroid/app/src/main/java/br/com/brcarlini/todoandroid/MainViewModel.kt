@@ -11,17 +11,16 @@ import br.com.brcarlini.todoandroid.model.Tarefa
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
 import retrofit2.Response
-import java.lang.Exception
 import java.time.LocalDate
 import javax.inject.Inject
+import kotlin.Exception
 
 @HiltViewModel
 class MainViewModel @Inject constructor(
     private val repository: Repository
         ): ViewModel() {
 
-
-
+    var tarefaSelecionada: Tarefa? = null
 
     private val _myCategoriaResponse =
         MutableLiveData<Response<List<Categoria>>>()
@@ -74,6 +73,30 @@ class MainViewModel @Inject constructor(
                 _myTarefaResponse.value = response
 
             }catch (e: Exception) {
+                Log.d("Erro", e.message.toString())
+            }
+        }
+    }
+
+
+    fun updateTarefa(tarefa: Tarefa){
+        viewModelScope.launch {
+            try {
+                repository.updateTarefa(tarefa)
+                listTarefa()
+            }catch (e: Exception){
+                Log.d("Erro", e.message.toString())
+            }
+        }
+    }
+
+
+    fun deleteTarefa(id: Long){
+        viewModelScope.launch {
+            try {
+                repository.deleteTarefa(id)
+                listTarefa()
+            }catch (e: Exception){
                 Log.d("Erro", e.message.toString())
             }
         }
